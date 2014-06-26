@@ -7,7 +7,7 @@ Welcome to Phase 0! Below you will find links to the curriculum for each week. E
 ### [Week 3: JavaScript](week-3) (Please do not start yet)
 
 ## Unit Requirements
-- [Peer-Pair program](https://github.com/Devbootcamp/phase-0-handbook/blob/master/peer-pairing_sessions.md) at least 4 times this unit. Read about [pairing](https://github.com/Devbootcamp/phase-0-handbook/blob/master/pairing-in-phase-0.md). 
+- [Peer-Pair program](https://github.com/Devbootcamp/phase-0-handbook/blob/master/peer-pairing-sessions.md) at least 4 times this unit. Read about [pairing](https://github.com/Devbootcamp/phase-0-handbook/blob/master/pairing-in-phase-0.md). 
 - [Submit feedback](https://socrates.devbootcamp.com/feedback/new) for all pairing sessions. (You should submit at least 3 for peer sessions and 2 for [GPS 1.1 and 1.2](https://github.com/Devbootcamp/phase-0-handbook/blob/master/guided-pairing-sessions.md))
 - [Rate Feedback](https://socrates.devbootcamp.com/feedback) at least 20 pieces of other people's feedback. 
 
