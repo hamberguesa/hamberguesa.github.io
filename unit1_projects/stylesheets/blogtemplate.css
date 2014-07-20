@@ -1,0 +1,106 @@
+html {
+	background-color:white;
+}
+
+#title {
+	margin:0 auto;
+	margin-top: 5%;
+	width:100%;
+}
+
+#navibar {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#title {
+	text-align:center;
+	width: 100%
+	margin: 0 auto;
+	font-family: Courier, monospace;
+	color:#DF9DE9;
+	font-size: 3em;
+}
+
+#navibar a {
+	text-decoration: underline;
+	font-family: Courier, monospace;
+	color:gray;
+	font-size: 1.5em;
+}
+
+#navibar p {
+	word-spacing: 2em;
+}
+
+#navibar a:hover {
+	color:#DF9DE9;
+}
+
+#content {
+	width:100%;
+	margin: 0 auto;
+}
+
+.title {
+	text-align:center;
+	font-family: Florence, cursive;
+	color:#DF9DE9;
+	font-size: 2.5em;
+}
+
+.date {
+	text-align:center;
+	font-family: Florence, cursive;
+	color:#DF9DE9;
+	font-size: 1em;
+}
+
+#content p {
+	line-height: 150%;
+	font-family: Courier; monospace;
+	font-size: 1.25em;
+	width: 90%;
+	margin-left: 5%;
+	color: gray;
+}
+
+#content h3 {
+	text-align: center;
+	font-family: Courier; monospace;
+	font-size: 1.75em;
+	color: gray;
+}
+
+#content h3 a {
+	text-align: center;
+	font-family: Courier; monospace;
+	font-size: 1em;
+	color: gray;
+}
+
+#content h3 a:hover {
+	color:#DF9DE9;
+}
+
+.image {
+	margin: 0 auto;
+	margin-left: 38%;
+}
+
+.image img {
+	height: 240px;
+	width: 360px;
+	border: solid 1px black;
+}
+
+#footer {
+	text-align: center;
+	font-family: Courier; monospace;
+	font-size: .75em;
+}
+
+#footer p {
+	color: #DF9DE9;
+}
