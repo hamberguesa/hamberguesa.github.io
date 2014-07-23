@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!--<style>
+        div {
+          border: 2px dashed aqua;
+        }
+        /*.responsive-design {
+          float: left;
+          margin: 0 auto;
+          width: 45%;
+        }
+        .fluid-layouts {
+          float: right;
+          margin: 0 auto;
+          width: 45%;
+        }
+        .your-conclusion {
+          float: left;
+          margin: 0 auto;
+          width: 45%;
+        }
+        .reflection {
+          float: right;
+          margin: 0 auto;
+          width: 45%;
+        }
+        .references {
+          float: left;
+          margin-left: 32%;
+          text-align: center;
+        }*/
+        
+        @media screen and (min-width: 300px) and (max-width: 600px) {
+            body {
+              width: 100%;
+            }
+            div {
+                float: none;
+                margin: 3px;
+                width: auto;
+            }
+            .header {
+                font-size:2em;
+                text-align:center;
+            }
+        }
+        
+        @media screen and (min-width: 600px) {
+          .header {
+            text-align: center;
+          }
+          .responsive-design {
+          float: left;
+          margin: 0 auto;
+          width: 45%;
+          }
+          .fluid-layouts {
+          float: right;
+          margin: 0 auto;
+          width: 45%;
+          }
+          .your-conclusion {
+          float: left;
+          margin: 0 auto;
+          width: 45%;
+          }
+          .reflection {
+          float: right;
+          margin: 0 auto;
+          width: 45%;
+          }
+          .references {
+          float: left;
+          margin-left: 32%;
+          text-align: center;
+          }
+        }
+    </style>-->
+    <title>Responsive Design and Fluid Layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <div class="header">
+      <h1>Responsive Design and Fluid Layouts</h1>
+      <h3>An introductory website to responsive design and fluid layouts.</h3>
+      <h4>By: Amber Hager and Alex Lang</h4>
+    </div>
+
+    <div class="responsive-design">
+      <header><strong>What is Responsive Design?</strong></header>
+      <p>Responsive design involves considering the site's structure and how
+        objects fit into that structure. The focus is on creating a positive user
+        experience, regardless of the medium through which the user views the page.<sup><a href=".references">1</a></sup></p>
+    </div>
+
+    <div class="fluid-layouts">
+      <header><strong>Fluid Layouts</strong></header>
+      <p>With fluid layouts, dimensions are set to percentages rather than pixels.  Fluid layouts are more user friendly and have a simple design.  
+      Fluid layouts are linked to media queries and special styles for optomization.<sup><a href=".references">2</a></sup></p>
+    </div>
+
+    <div class="your-conclusion">
+      <header><strong>Conclusion</strong></header>
+      <p>The purpose of fluid layouts is to allow good user experiences across a 
+      range of viewing devices (e.g., iPhone, tablet, computer, etc.) We think that it is
+      good practice to use fluid layouts, because they make sites more accessible, 
+      allowing the information to reach as wide an audience as possible.</p>
+    </div>
+
+    <div class="reflection">
+      <header><strong>Reflection</strong></header>
+      <p>It was a little frustrating to implement some of the concepts.  We struggled a bit with getting media queries to work when re-sizing our screen, and noticed that we had two formulas for the meta tag from two different sources - we ended up using the shorter of the two and it worked.</p>
+
+      <p>I think smartphones and tablets have changed web design through having smaller screens and some limited features (e.g. some click-through issues, etc.). Screens are only going to get smaller (e.g. android wear watch) and more people will likely rely on smaller screened devices as their main internet source. In addition, interactions are moving to feel more natural on touch devices and less natural on desktops (e.g. websites where scrolling makes the images move in chunks or pages, swiping left or right to go through sections/pages, etc.).</p>
+
+      <p>I think that visually impaired people can definitely use the web.  There is screen reading software and use of mobile versions, which are often less cluttered.  I am sure there are other methodologies that I am unaware of.  I think visual impairment should definitely be a consideration in web design. Can a screen reader navigate through your site without being inhibited by images and other non-text elements?  Can a color-blind reader see aspects of your website? Fortunately, I feel that the rise of touchscreen gadgets will enhance web use by the visually impaired because those devices are also coming with improved text-to-speech capabilities, which will only continue to get better.</p>
+
+      <p>I think the concept of fluid design resonated with me while learning about web and design.  There have been many times that I have been frustrated with my inability to access a site on my phone. Designing fluid sites helps to prevent this and can therefore increase userability.  I can't think of many instances where a fixed site is going to be a good idea in the future.  I also think exploring how one's website works with different browsers is an important, but often overlooked, consideration.  For example, in doing this exercise, we discovered that certain design issues in Firefox were not present in Chrome.  I also think that the flow of a website is an important consideration, particularly when the site is an e-commerce site.  FInally, while a big advocate for fluid design, I'm still a little confused by media queries, but I think practice will make perfect.</p>
+    </div>
+
+    <div class="references">
+      <ul>
+        <li><sup>1</sup><a href="http://girldevelopit.github.io/gdi-core-intermediate-html-css/class4.html#/1">Girl Develop It: Intro to Responsive Web Design and Compatibility</a></li>
+        <li><sup>2</sup><a href="http://www.sitepoint.com/responsive-web-design-fluid-layouts/">Responsive Web Design:Fluid Layouts</a></li>
+      </ul>
+    </div>
+
+  </body>
+</html>
