@@ -1,0 +1,86 @@
+body {
+	color: gray;
+	font-family: Courier;
+    }
+  
+li {
+	display: inline;
+	padding: 15px;
+   /*margin: 0 auto;*/
+   /*border-right: 1px black solid;*/
+}
+    
+a {
+	text-decoration: none;
+	color: purple;
+}
+    
+a:hover {
+	color: orange;
+}
+    
+#intro {
+	float: left;
+	width: 40%;
+	margin: 0 auto;
+}
+    
+#why {
+	float: right;
+	width: 40%;
+	margin: 0 auto;
+}
+    
+#resources {
+	margin: 0 auto;
+	width: 300px;
+	margin-top: 45%;
+	/*clear: left;*/
+}
+    
+#resources a {
+	/*margin: 0 auto;*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+    
+#about {
+	margin: 0 auto
+	width: 300px;
+}
+    
+#about p {
+	text-align: center;
+}
+
+#reflection {
+	margin: 0 auto;
+	width: 300px;
+}
+    
+#reflectio p {
+	text-align: center;
+ }
+    
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+    
+footer {
+	margin-top: 80%;
+	margin-bottom: 0;
+}
+    
+footer p {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+	text-align: center;
+	color: purple;
+}
+    
