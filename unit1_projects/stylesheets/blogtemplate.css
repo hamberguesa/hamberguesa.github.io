@@ -1,17 +1,32 @@
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    body {
+      width: 100%;
+    }
+    div {
+      float: none;
+      margin: 0px;
+      width: auto;
+    }
+    header {
+      font-size:2em;
+      text-align:center;
+    }
+
+    #navibar {
+    	float: right;
+        margin: 0 auto;
+        width: 45%;
+    }
+}
+               
 html {
 	background-color:white;
 }
 
-#title {
+/*#title {
 	margin:0 auto;
 	margin-top: 5%;
 	width:100%;
-}
-
-#navibar {
-	text-align: center;
-	width: 100%;
-	margin: 0 auto;
 }
 
 #title {
@@ -21,11 +36,18 @@ html {
 	font-family: Courier, monospace;
 	color:#DF9DE9;
 	font-size: 3em;
+}*/
+
+#navibar {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	background-color: black;
 }
 
 #navibar a {
-	text-decoration: underline;
-	font-family: Courier, monospace;
+	text-decoration: none;
+	font-family: 'Dancing Script', cursive;
 	color:gray;
 	font-size: 1.5em;
 }
@@ -35,53 +57,110 @@ html {
 }
 
 #navibar a:hover {
-	color:#DF9DE9;
+	color:#AA3F14;
+}
+
+header {
+	margin-left:32%;
 }
 
 #content {
-	width:100%;
+	width:95%;
 	margin: 0 auto;
 }
 
 .title {
 	text-align:center;
-	font-family: Florence, cursive;
-	color:#DF9DE9;
-	font-size: 2.5em;
+	font-family:'Dancing Script', cursive;
+	color:black;
+	font-size: 3em;
 }
+
+/*INDEX SPECIFIC*/
+
+ul {
+	list-style:none; 
+	padding:0; 
+	margin:0;
+	text-align: center;
+}
+
+li a {
+	text-decoration: underline;
+	font-family: 'Neuton', sans-serif;
+	color:black;
+	font-size: 1.25em;
+}
+
+li a:hover {
+	color:#AA3F14;
+}
+
+.technical {
+	float: left;
+    margin: 0 auto;
+    width: 45%;
+}
+
+.cultural {
+	float: right;
+	margin: 0 auto;
+	width: 45%;
+}
+
+.other { 
+	float: left;
+    margin-left: 35%;
+    text-align: center;
+}
+
+#indexfooter {
+	margin-top: 98%;
+}
+
+/*BLOG SPECIFIC*/
 
 .date {
 	text-align:center;
-	font-family: Florence, cursive;
-	color:#DF9DE9;
+	font-family: 'Dancing Script', cursive;
+	color:black;
 	font-size: 1em;
 }
 
 #content p {
 	line-height: 150%;
-	font-family: Courier; monospace;
+	font-family: 'Neuton', sans-serif;
 	font-size: 1.25em;
 	width: 90%;
 	margin-left: 5%;
-	color: gray;
+	color: black;
 }
 
 #content h3 {
 	text-align: center;
-	font-family: Courier; monospace;
+	font-family: 'Neuton', sans-serif;
 	font-size: 1.75em;
-	color: gray;
+	color: black;
 }
 
 #content h3 a {
 	text-align: center;
-	font-family: Courier; monospace;
+	font-family: 'Neuton', sans-serif;
 	font-size: 1em;
-	color: gray;
+	color: black;
 }
 
 #content h3 a:hover {
-	color:#DF9DE9;
+	color:#AA3F14;
+}
+
+#content p a {
+	color: black;
+	text-decoration: underline;
+}
+
+#content p a:hover {
+	color:#AA3F14; 
 }
 
 .image {
@@ -95,12 +174,20 @@ html {
 	border: solid 1px black;
 }
 
-#footer {
+footer {
 	text-align: center;
-	font-family: Courier; monospace;
+	font-family: 'Neuton', sans-serif;
 	font-size: .75em;
 }
 
-#footer p {
-	color: #DF9DE9;
+footer p {
+	color: black;
+}
+
+footer a {
+	color: black;
+}
+
+footer a:hover {
+	color:#AA3F14;
 }
