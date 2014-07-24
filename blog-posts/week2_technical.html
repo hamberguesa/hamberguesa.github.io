@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>From Court to Code</title>
+		<link type="text/css" rel="stylesheet" href="../unit1_projects/stylesheets/blogtemplate.css"/>
+	</head>
+
+	<body>
+		<!--Title of Blog-->
+		<div id="title">
+			<p>From Court to Code</p>
+		</div>
+		<!--Nagivation Bar -->
+		<div id="navibar">
+		<p><a href="./about.html">About</a> &nbsp; <a href="./week1_technical.html">Technical</a> &nbsp; <a href="./week1_cultural.html">Cultural</a> &nbsp; <a href="./contact.html">Contact</a></p>
+		<hr>
+		</div>
+
+		<!--Content -->
+		<div id="content"> <!--needs to be repeated for ea. article begin-->
+			<h1 class="title">The Difference Between Margin, Border, and Padding</h1>
+			<h4 class="date">July 24, 2014</h4>
+
+			<!--Article Begins Here -->
+			<p></p>
+			<h3><a href=" "target="_blank"></a></h3>
+			<div class="image"><img src="http://www.w3.org/TR/CSS2/images/boxdim.png"></div>
+			<p>Border, margin and padding are all properties in CSS. Padding is the space between the content and the border, whereas margin is the space outside the border. In other words, margin is applied to the outside of your element and affects how far your element is from other elements.  Padding is applied to the inside of your element and affects how far your element's content is from the border. And the CSS border property allows you to specify the style and color of an element's border. Ways to define the margin, padding and border properties can be found in the "Understanding border, margin and padding properties" link below.</p>
+
+			<p>Using margin will not affect your element's dimensions.  Using padding <em>will</em> affect your element's dimensions (e.g., if you have a 100px x 100px div with a 2px padding, your div will actually be 102px x 102px).</p>
+
+			<p>The biggest difference between padding and margin is that margins auto-collapse and padding does not. Consider, for example, two elements next to each other, both with padding of 1em. This padding is considered to be part of the element, and is always preserved. Therefore, you will end up with: First Element Content > First Element Padding > Second Element Padding > Second Element Content. Thus, the content of the two elements will end up being 2em apart.</p>
+
+			<p>If we replace that padding with a 1em margin, you will end up with: First Element Content > 1em Combined Margin > Second Element of Content. Thus, the content of the two elements here will end up being 1em apart. Again, margins are considered to be outside of the element, and margins of adjacent items will overlap. This can be really useful when you know that you want a specific amount of space around an element regardless of what element it is next to.</p>
+
+			<p>By default, I tend to use margin, except when I have a border or background and want to increase the space inside that visible box. Hope this was helpful!</p>
+
+			<p style="text-align:center">Helpful Links:</p>
+			<p style="text-align:center"><a href="http://www.smashingmagazine.com/2009/10/05/mastering-css-coding-getting-started/#CSS-Basics1"target="_blank">Mastering CSS Coding: Getting Started</a><br>
+			<a href="http://www.templatemonster.com/help/css-understanding-border-margin-and-padding-properties.html"target="_blank">Understanding border, margin and padding properties</a></p>
+		</div>
+		<hr>
+		<!--Footer -->
+		<div id="footer">
+			<p>Copyright Amber Hager 2014</p>
+		</div>
+	</body>
+</html>
