@@ -164,9 +164,11 @@ li a:hover {
 	color:#AA3F14; 
 }
 
-.image {
-	margin: 0 auto;
-	margin-left: 38%;
+.image img {
+	/*margin: 0 auto;
+	margin-left: 38%;*/
+	margin: auto;
+	display: block;
 }
 
 .image img {
