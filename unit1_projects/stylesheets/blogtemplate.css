@@ -93,6 +93,12 @@ li a {
 	font-size: 1.25em;
 }
 
+li {
+	font-family: 'Neuton', sans-serif;
+	color:black;
+	font-size: 1.25em;
+}
+
 li a:hover {
 	color:#AA3F14;
 }
