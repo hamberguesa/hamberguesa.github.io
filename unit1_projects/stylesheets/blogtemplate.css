@@ -60,8 +60,9 @@ html {
 	color:#AA3F14;
 }
 
-header {
-	margin-left:35%;
+header img {
+	margin: auto;
+	display: block;
 }
 
 #content {
