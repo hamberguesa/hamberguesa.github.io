@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<title>From Court to Code</title>
-		<link type="text/css" rel="stylesheet" href="unit1_projects/stylesheets/blogtemplate.css"/>
+		<link type="text/css" rel="stylesheet" href="../unit1_projects/stylesheets/blogtemplate.css"/>
 		<!--Fonts-->
 		<link href='http://fonts.googleapis.com/css?family=Neuton:400,400italic,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
 	</head>
-
+		
 	<body>
 		<!--Icons-->
 		<div id="icons">	
@@ -17,47 +17,49 @@
 
 		<!--Navigation Bar-->
 		<div id="navibar">
-		<p><a href="index.html">Home</a> &nbsp; <a href="blog-posts/about.html">About</a> &nbsp; <a href="blog-posts/week1_technical.html">Technical</a> &nbsp; <a href="blog-posts/week1_cultural.html">Cultural</a> &nbsp; <a href="blog-posts/contact.html">Contact</a></p>
+		<p><a href="../index.html">Home</a> &nbsp; <a href="about.html">About</a> &nbsp; <a href="week1_technical.html">Technical</a> &nbsp; <a href="week1_cultural.html">Cultural</a> &nbsp; <a href="contact.html">Contact</a></p>
 		<hr>
 		</div>
 
-		<header><img src="./blog-posts/Liberty.jpg"/></header>
+		<header><img src="Liberty.jpg"/></header>
 
 		<!--Content -->
 		<div id="content"> <!--needs to be repeated for ea. article begin-->
-			<h1 class="title">Index</h1>
+			<h1 class="title">Throwin' Me For a Loop</h1>
+			<h4 class="date">August 7, 2014</h4>
+
+			<!--Article Begins Here -->
+			<p style = "text-align: center">Loops in Ruby are used to execute the same block of code a specified number of times, or until a condition is met.</p>
+
+			<h3>The While Loop</h3>
+			<p>The while loop executes code while a given condition evaluates to true.  Be sure that your condition eventually evaluates to false, or you will create an infinite loop and crash your terminal.  A while loop's conditional is separated from code by the word 'do', a newline, backslash, or semicolon.</p>
+			<div class="image"><img src="../unit1_projects/images/whileloop.png"></div>
+
+			<h3>The Until Loop</h3>
+			<p>A complement to the while loop, the until loop executes code while a given condition evaluates to false.  An until loop's conditional is separated from code by the word 'do', a newline, or semicolon.</p>
+			<div class="image"><img src="../unit1_projects/images/untilloop.png"></div>
+
+			<h3>The Times Loop</h3>
+			<p>The times loop can be used on any variable containing a number or used on a number itself. You'll notice that the times loop uses the dot syntax (3.times do) rather than the keyword syntax used by the while and until loop. This has to do with how the times loop works under the hood, but it's used in the same way a while or until loop is used.</p>
+			<div class="image"><img src="../unit1_projects/images/timesloop.png"></div>
+
+			<h3>The For Loop/The Each Method</h3>
+			<p>The most common loop in Ruby. The for loop executes code once for each element in the expression. A for loop's conditional is separated from code by the word 'do', a newline, or semicolon.  Using a for loop, we can repeat a command as many times as we want.  We can also vary its output depending on how many times it has run.  However, in Ruby, the preferred way of doing a for loop is to use the each method (see below).</p>
+			<div class="image"><img src="../unit1_projects/images/forloop.png"></div>
+
 		</div>
 
-		<div class="technical">
-			<h3 class="title">Technical Blog</h3>
-			<ul>
-				<li><a href="http://hamberguesa.github.io/blog-posts/week1_technical.html">Week One Technical Blog</a></li>
-				<li><a href="http://hamberguesa.github.io/blog-posts/week2_technical.html">Week Two Technical Blog</a></li>
-				<li><a href="http://hamberguesa.github.io/blog-posts/week3_technical.html">Week Three Technical Blog</a></li>
-				<li><a href="http://hamberguesa.github.io/blog-posts/week4_technical.html">Week Four Technical Blog</a></li>
-			</ul>
+		<div class="backarrow">
+			<a href="week3_technical.html"> &#65513; Previous Post</a>
 		</div>
 
-		<div class="cultural">
-			<h3 class="title">Cultural Blog</h3>
-			<ul>
-				<li><a href="http://hamberguesa.github.io/blog-posts/week1_cultural.html">Week One Cultural Blog</a></li>
-				<li><a href="http://hamberguesa.github.io/blog-posts/week3_cultural.html">Week Three Cultural Blog</a></li>
-				<li><a href="http://hamberguesa.github.io/blog-posts/week4_cultural.html">Week Four Cultural Blog</a></li>
-			</ul>
+		<div class="nextarrow">
+			<a href=""> Next Post &#65515;</a>
 		</div>
-
-		<div class="other">
-			<h3 class="title">Other Projects</h3>
-			<ul>
-				<li><a href="http://hamberguesa.github.io/GPS/gps1.1copy.html">Guided Pairing Session [GPS] 1.1 - Peer Programming</a></li>
-				<li><a href="http://hamberguesa.github.io/pairing_challenges/starting-point.html">Responsive Design & Fluid Layouts</a></li>
-			</ul>
-		</div>
-
+		
 		<hr>
 		<!--Footer -->
-		<footer id="indexfooter">
+		<footer>
 			<p>Copyright Amber Hager 2014<br>Website Logo: Lady Justice. Image Credit: "All shall be equal before the law" by <a href="http://www.flickr.com/photos/smbaxter24/4376733118/"target="_blank">siobhanm_baxter</a> on Flickr via Creative Commons.</p>
 		</footer>
 	</body>
