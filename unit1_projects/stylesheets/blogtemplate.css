@@ -20,7 +20,7 @@
 }
                
 html {
-	background-color:white;
+	background-color: white;
 }
 
 /*#title {
@@ -38,6 +38,93 @@ html {
 	font-size: 3em;
 }*/
 
+#liberty {
+	background: url(http://imgur.com/5bfW6Xk.jpg) no-repeat center center;
+	background-size: cover;
+	/*border-radius: 10px;*/
+	height: 785px;
+	width: 100%;
+	/*border-top: 20px;*/
+	position: relative;
+	display: block;
+}
+
+#sddm {
+	margin: 0;
+	padding: 0;
+	z-index: 30;
+	width: 95%;
+}
+
+#sddm li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 1.25em 'Dancing Script';
+}
+
+#sddm li a {
+	display: block;
+	margin: 0 1px 0 0;
+	padding: 4px 10px;
+	width: 95%;
+	background: black;
+	color: gray;
+	text-align: center;
+	text-decoration: underline;
+	font: bold 2em 'Dancing Script';
+}
+
+#sddm li a:hover {
+	background: #AA3F14;
+}
+
+#sddm div {
+	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: black;
+	border: 1px solid black;
+}
+
+#sddm div a {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: auto;
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: black;
+	color: gray;
+	font: 1.25em 'Dancing Script';
+}
+
+#sddm div a:hover {
+	background: #AA3F14;
+	color: gray;
+}
+
+.droplow {
+	float: right;
+	position: center;
+	bottom: 0;
+}
+
+#blog-name {
+    position: relative;
+    color: black;
+    vertical-align: bottom;
+    font-size: 7em;
+    font-family: 'Dancing Script', cursive;
+	letter-spacing:2px;
+	padding: 10px 10px 10px 10px;
+    border-radius: 0px 10px 0px 0px;
+}
+
 #navibar {
 	text-align: center;
 	width: 100%;
@@ -49,7 +136,7 @@ html {
 	text-decoration: none;
 	font-family: 'Dancing Script', cursive;
 	color:gray;
-	font-size: 1.5em;
+	font-size: 2em;
 }
 
 #navibar p {
