@@ -36,14 +36,12 @@
 
 			<div class="image"><img src="../unit1_projects/images/classsyntax.png"></div>
 
-			<!--<p style = "margin-left: 47%"> class ClassName</p>
-			<p style = "margin-left: 47%">end</p>-->
 			<h3>Class Variables</h3>
 			<p>There are several types of variables available for use within a Ruby class:</p>
 			<p><strong>Local Variables:</strong> Defined in a method and not available outside that method.  Local variables begin with a lowercase letter or underscore. For our cows, a _milk_remaining variable could be used within a milk method, since we only want the milk method to change that variable.</p>
-			<p><strong>Instance Variables:</strong> Available across all methods in a class for any object, but can change from object to object. Instance variables begin with @.</p>
-			<p><strong>Class Variables:</strong> Members of a certain class, but shared by all objects. Class variables begin with @@.</p>
-			<p><strong>Global Variables:</strong> Available everywhere, which means it can be changed from anywhere in the program.  This is generally not a good idea.  Global variables begin with $.</p>
+			<p><strong>Instance Variables:</strong> Available across all methods in a class for any object, but can change from object to object. Instance variables begin with @. Let's make @name an instance variable; after all, every cow should know its name.</p>
+			<p><strong>Class Variables:</strong> Members of a certain class, but shared by all objects. Class variables begin with @@. If we make @@brand_initials a class variable, it will be accessible by all of our cows. We wouldn't want to lose them, would we?</p>
+			<p><strong>Global Variables:</strong> Available everywhere, which means it can be changed from anywhere in the program.  This is generally not a good idea.  Global variables begin with $. $farm_address could be a global variable but, like I said, giving your cows the ability to change your address is probably not a good idea!</p>
 
 			<h3>Initialize Method</h3>
 			<p>A blank object is not very exciting. In order to start using your object, it must first be initialized (assuming it has any instance variables that needs initializing). This is done via the initialize method. Ruby will pass any arguments you pass to ClassName.new on to initialize on the new object. You can then use normal variable assignments and methods to initialize the state of the object. In this example, a Cow class is presented. Its initialize method will take a name and breed argument, and assign them to instance variables.</p>
@@ -58,7 +56,7 @@
 			<div class="codeimagebig"><img src="../unit1_projects/images/classexample.png"></div>
 
 			<h3>Resources</h3>
-			<p style="text-align:center"><a href="http://code.tutsplus.com/tutorials/ruby-for-newbies-working-with-classes--net-15938"target="_blank">Ruby for Newbies: Working with Classes</a><br><a href="http://juixe.com/techknow/index.php/2007/01/22/ruby-class-tutorial/"target="_blank">Ruby Class Tutorial</a><br><a href="http://www.codecademy.com/en/tracks/ruby"target="_blank">CodeAcademy</a></p>
+			<p style="text-align:center"><a href="http://code.tutsplus.com/tutorials/ruby-for-newbies-working-with-classes--net-15938"target="_blank">Ruby for Newbies: Working with Classes</a><br><a href="http://juixe.com/techknow/index.php/2007/01/22/ruby-class-tutorial/"target="_blank">Ruby Class Tutorial</a><br><a href="http://www.codecademy.com/en/tracks/ruby"target="_blank">If you want practice: CodeAcademy</a></p>
 
 		</div>
 
