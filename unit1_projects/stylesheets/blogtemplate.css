@@ -275,6 +275,32 @@ li a:hover {
 	border: solid 1px black;
 }
 
+.codeimage img {
+	/*margin: 0 auto;
+	margin-left: 38%;*/
+	margin: auto;
+	display: block;
+}
+
+.codeimage img {
+	height: 400px;
+	width: 550px;
+	border: solid 1px black;
+}
+
+.codeimagebig img {
+	/*margin: 0 auto;
+	margin-left: 38%;*/
+	margin: auto;
+	display: block;
+}
+
+.codeimagebig img {
+	height: 1000px;
+	width: 900px;
+	border: solid 1px black;
+}
+
 .nextarrow a {
 	color: black;
 	margin-left: 85%;

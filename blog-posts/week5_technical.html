@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>From Court to Code</title>
+		<link type="text/css" rel="stylesheet" href="../unit1_projects/stylesheets/blogtemplate.css"/>
+		<!--Fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Neuton:400,400italic,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+	</head>
+		
+	<body>
+	
+		<!--Navigation Bar-->
+		<div id="navibar">
+		<p><a href="../index.html">Home</a> &nbsp; <a href="about.html">About</a> &nbsp; <a href="week1_technical.html">Technical</a> &nbsp; <a href="week1_cultural.html">Cultural</a> &nbsp; <a href="contact.html">Contact</a></p>
+		<hr>
+		</div>
+
+		<header><img src="Liberty.jpg"/></header>
+
+		<!--Content -->
+		<div id="content"> <!--needs to be repeated for ea. article begin-->
+			<h1 class="title">Class[y] Cows</h1>
+			<h4 class="date">August 15, 2014</h4>
+
+			<!--Article Begins Here -->
+			<h3>Object-Oriented Programming</h3>
+			<p>Ruby is an object-oriented programming (OOP) language - it manipulates programming constructs called objects.  <strong>Objects</strong> have <strong>methods</strong> (a set of functions) and <strong>variables</strong> (a set of attributes).</p> 
+			<p style = "text-align: center">bessie.legs <br> # => 4</p>
+			<p style = "text-align: center">Bessie is an object with a legs method and a leg attribute of 4. <br> In other words, Bessie the cow (object) has a method (legs), which tells us that Bessie has 4 legs.</p>
+			<h3>Classes</h3>
+			<p>A <strong>class</strong> is a way of organizing and producing objects with similar methods and variables. Classes are used to construct an object in a DRY manner. The syntax to create a new class is pretty simple:</p>
+			<p style = "margin-left: 47%"> class ClassName</p>
+			<p style = "margin-left: 47%">end</p>
+			<h3>Class Variables</h3>
+			<p>There are several types of variables available for use within a Ruby class:</p>
+			<p><strong>Local Variables:</strong> Defined in a method and not available outside that method.  Local variables begin with a lowercase letter or underscore.</p>
+			<p><strong>Instance Variables:</strong> Available across all methods in a class for any object, but can change from object to object. Instance variables begin with @.</p>
+			<p><strong>Class Variables:</strong> Members of a certain class, but shared by all objects. Class variables begin with @@.</p>
+			<p><strong>Global Variables:</strong> Available everywhere, which means it can be changed from anywhere in the program.  This is generally not a good idea.  Global variables begin with $.</p>
+			<h3>Initialize Method</h3>
+			<p>A blank object is not very exciting. In order to start using your object, it must first be initialized (assuming it has any instance variables that needs initializing). This is done via the initialize method. Ruby will pass any arguments you pass to ClassName.new on to initialize on the new object. You can then use normal variable assignments and methods to initialize the state of the object. In this example, a Cow class is presented. Its initialize method will take a name and breed argument, and assign them to instance variables.</p>
+
+			<div class="image"><img src="../unit1_projects/images/classinitialize.png"></div>
+
+			<h3>Public vs. Private Methods</h3>
+			<p>A method in Ruby is a set of expressions that returns a value. With methods, one can organize their code into subroutines that can be easily invoked from other areas of their program. A method can be defined as a part of a class or separately.  A method can be public or private.  <strong>Public methods</strong> allow for an interface with the rest of the program; they can be called outside the class.  Public methods are the default.  On the other hand, <strong>private methods</strong> are not accessible for outside objects.  To make a method private, just put 'private' above the method(s) you want to be private.  However, in order to access the private methods, public methods within the class must access the information.</p>
+			<h3>Let's Code</h3>
+			<p>Now that we know the parts that make up a class, let's build one:</p>
+			<div class="codeimagebig"><img src="../unit1_projects/images/classexample.png"></div>
+
+			<h3>Resources</h3>
+			<p style="text-align:center"><a href="http://code.tutsplus.com/tutorials/ruby-for-newbies-working-with-classes--net-15938"target="_blank">Ruby for Newbies: Working with Classes</a><br><a href="http://juixe.com/techknow/index.php/2007/01/22/ruby-class-tutorial/"target="_blank">Ruby Class Tutorial</a><br><a href="http://www.codecademy.com/en/tracks/ruby"target="_blank">CodeAcademy</a></p>
+
+		</div>
+
+		<div class="backarrow">
+			<a href="week4_technical.html"> &#65513; Previous Post</a>
+		</div>
+
+		<div class="nextarrow">
+			<a href=""> Next Post &#65515;</a>
+		</div>
+		
+		<hr>
+		<!--Footer -->
+		<footer>
+			<p>Copyright Amber Hager 2014<br>Website Logo: Lady Justice. Image Credit: "All shall be equal before the law" by <a href="http://www.flickr.com/photos/smbaxter24/4376733118/"target="_blank">siobhanm_baxter</a> on Flickr via Creative Commons.</p>
+		</footer>
+	</body>
+</html>
