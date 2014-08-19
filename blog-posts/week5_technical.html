@@ -38,7 +38,7 @@
 
 			<h3>Class Variables</h3>
 			<p>There are several types of variables available for use within a Ruby class:</p>
-			<p><strong>Local Variables:</strong> Defined in a method and not available outside that method.  Local variables begin with a lowercase letter or underscore. For our cows, a _milk_remaining variable could be used within a milk method, since we only want the milk method to change that variable.</p>
+			<p><strong>Local Variables:</strong> Defined in a method and not available outside that method.  Local variables begin with a lowercase letter or underscore. For our cows, a _milk_remaining variable could be used within a milk method, since we only want the milk method to change that variable. After we're done milking, this variable is discarded and the milk gets refilled.</p>
 			<p><strong>Instance Variables:</strong> Available across all methods in a class for any object, but can change from object to object. Instance variables begin with @. Let's make @name an instance variable; after all, every cow should know its name.</p>
 			<p><strong>Class Variables:</strong> Members of a certain class, but shared by all objects. Class variables begin with @@. If we make @@brand_initials a class variable, it will be accessible by all of our cows. We wouldn't want to lose them, would we?</p>
 			<p><strong>Global Variables:</strong> Available everywhere, which means it can be changed from anywhere in the program.  This is generally not a good idea.  Global variables begin with $. $farm_address could be a global variable but, like I said, giving your cows the ability to change your address is probably not a good idea!</p>
