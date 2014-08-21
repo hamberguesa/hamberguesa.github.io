@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Favicon-->
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAv/7lAH/LfwCy/v8AmeT/AGa6fwBZy/4AAGWcAJWq1AAAWI8AAHFZAEu+8gAAmP0A2PL/AAAZegAAi/AAAAxtAACMzADM/v8ADKXYABlmugAATKEAWMv/AAAMfgAA23IAAKU7AMrU6QAZsuUAFl27AEzxpQAmnL8AAAx2ABmy/gAAiwAAAFwAAGXL/wAAfuQAf8v+AEyx/wAmv/IAAHsdACay5QAynL8AAHLMADLL8QAAZb8AP7LcAADwcgAAJZQAMrLlAD/Y/gA/qT8AGZjlAABx2AC/v9wAJqXyABmHsgC/5f4AC2HDALLl/wAMM34Amcv/AAA/fgBy8b8ALFWqAD+L2AA/mD8Av9jyAL/L5QAAf8sADKX9AD++/wBgf78AGbLxAACYAAAAmNgAAORMAH/QfwB/f6UAABmHAACcYQAAf8wAJr/+AAByvwAAMpwAJs9lAAx2PwAAJY8AFmnHAH+y5QCM2P4AGaXlAL/cvwAAftgAIVmyADLL5QAAbh0AMsv+AL/lvwAAZcwAMqXUAD8/fgAAXFAAAFi/AABLsgAAlyYAcr7/AADjcgBZqb8APz+PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ1krUVFRUVFZQwAAAAAAWVFLXyxhYWFhSxFBRAAAAGMVT08wTzBPFC4yNGc2AAAOV2hPCQdPClcfPGRFTwAAbVQ+L0xMGGs+FxBlQ2gAAVBgKAVNHQM/IRlmTgAAAFxpaWxqJiZqPQQSVUozYgBcKiYjCzEbKRtHNx5WIkJcDRYTURFjKysrURMnWzgCYjsbXTU1NSRjNTVRURNTGgANSUYPDAwMDCQ1Yy0rHAgAAAZSRkYMDAwPJDUcHF4aAAAAWiBGRg8kDyRjXkBIAAAAAAAAOSU1NTpYXggaAAAAAAAAAAAAAAAAAAAAAAAAAP//AADADwAAgAMAAIABAACAAQAAgAEAAAAHAAAAAQAAAAAAAAAAAAAAAQAAAAEAAIABAADAAwAA8AcAAP//AAA=" rel="icon" type="image/x-icon" />
+
+		<title>From Court to Code</title>
+		<link type="text/css" rel="stylesheet" href="../unit1_projects/stylesheets/blogtemplate.css"/>
+		<!--Fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Neuton:400,400italic,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+	</head>
+		
+	<body>
+	
+		<!--Navigation Bar-->
+		<div id="navibar">
+		<p><a href="../index.html">Home</a> &nbsp; <a href="about.html">About</a> &nbsp; <a href="week1_technical.html">Technical</a> &nbsp; <a href="week1_cultural.html">Cultural</a> &nbsp; <a href="contact.html">Contact</a></p>
+		<hr>
+		</div>
+
+		<header><img src="Liberty.jpg"/></header>
+
+		<!--Content -->
+		<div id="content"> <!--needs to be repeated for ea. article begin-->
+			<h1 class="title">Object-Oriented vs. Functional Programming: <br>Is it Really a Competition?</h1>
+			<h4 class="date">August 21, 2014</h4>
+
+			<!--Article Begins Here -->
+			<p>A common misconception is that Object-Oriented Programming (OOP) and Functional (Procedural) Programming are opposing concepts.  In reality, they are not.  For example, while Ruby is an object-oriented language, <a href = "http://www.sitepoint.com/functional-programming-techniques-with-ruby-part-i/"target="_blank">it can function just as well in a functional manner.</a></p>
+
+			<h3>What is Functional Programming?</h3>
+
+			<p><a href = "http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-functional-programming/"target="_blank">Functional programming</a> is a style of programming which models computations as the evaluation of expressions. Or, as Jonathon Morgan puts it, "functional programming is the mustachioed hipster of programming paradigms." Procedural languages know about small, fixed sets of different kinds of data (e.g., strings, numbers, arrays, etc.), known as data types.  Data in functional programs should be immutable, meaning that it should never change.  The language contains built-in operations (methods) that do things to the data types (e.g., concatenate strings, do math with integers, etc.).  Variables made by the programmer hold data types.  Every possible data type and operation is already in existence; built into the sytax of the language. Since the programmer creates the variables, she knows which methods she can use to do things to the data types. Functional programs should be stateless.  They should perform every task as if for the first time, with no knowledge of what may or may not have happened earlier in the program's execution.</p>  
+
+			<h3>What is Object-Oriented Programming?</h3>
+
+			<p>Everything in <a href = "http://ruby.bastardsbook.com/chapters/oops/"target="_blank">OOP</a> is grouped as "objects." OOP is implemented by sending messages to objects.  The first step in OOP is to identify all the objects a programmer wants to manipulate and how they relate to each other. Once an object has been identified, it is generalized as a class of objects. The class defines the kind of data it contains (attributes/variables) and any methods used to manipulate it. A class provides a kind of blueprint for the construction of similar objects. A data class can define subclasses of data objects that share (inherit) some or all of the main class characteristics (e.g., a Dog class could be a subclass of an Animal class). Since a class defines only the data it needs to be concerned with, when an instance of that class (an object) is run, the code will not be able to accidentally access other program data, thus increasing security. Unlike in functional programming, the concept of data classes allows a programmer to create any new data type that is not already defined in the language itself. Object-oriented programs are, therefore, open-ended.</p>
+
+			<div class="codeimage"><img src="http://teaching.software-carpentry.org/wp-content/uploads/2013/08/OOP.jpeg"></div>
+
+			<h3>So when do you use functional programming, and when do you use OOP?</h3>
+
+			<p><strong>When you anticipate a different kind of program evolution:</strong> <i>Object-oriented languages</i> are good when you have a fixed set of operations on things (objects) and, as your code evolves, you primarily add new objects. This can be accomplished by adding new classes which implement existing methods, and the existing classes are left alone. <i>Functional languages</i> are good when you have a fixed set of objects, and as your code evolves, you primarily add new operations on existing objects. This can be accomplished by adding new methods that compute with existing data types, and the existing methods are left alone.</p>
+
+			<p><strong>When evolution goes the wrong way, you have problems:</strong> Adding a new operation to an <i>object-oriented</i> program may require editing many class definitions to add a new method.  Similarly, adding a new kind of object to a <i>functional</i> program may require editing many function definitions to add a new case. In 1998, Phil Wadler dubbed this the "expression problem" and a widely accepted solution has yet to hit the mainstream.</p>
+
+			<p><strong>When a system's performance and integrity are both critical:</strong> <i>Functional</i> programming is typically used when your program needs to do exactly what you expect every time and needs to operate in an environment where its tasks can be shared across hundreds or thousands of networked computers. Functional languages excel at manipulating symbolic data in tree form. Some argue that functional programming is best used for GamingAI, mathematical computations, and concurrency.  However, practically everything you can do in OPP can be done in functional programming, and vice versa. It's just another way to code something; a different way to solve problems.</p>
+
+		</div>
+
+		<div class="backarrow">
+			<a href="week5_technical.html"> &#65513; Previous Post</a>
+		</div>
+
+		<div class="nextarrow">
+			<a href=""> Next Post &#65515;</a>
+		</div>
+		
+		<hr>
+		<!--Footer -->
+		<footer>
+			<p>Copyright Amber Hager 2014<br>Website Logo: Lady Justice. Image Credit: "All shall be equal before the law" by <a href="http://www.flickr.com/photos/smbaxter24/4376733118/"target="_blank">siobhanm_baxter</a> on Flickr via Creative Commons.</p>
+		</footer>
+	</body>
+</html>
