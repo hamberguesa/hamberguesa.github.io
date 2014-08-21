@@ -275,6 +275,14 @@ li a:hover {
 	border: solid 1px black;
 }
 
+.rectangleimage img {
+	margin: auto;
+	display: block;
+	height: 350px;
+	width:  375px;
+	border: solid 1px black;
+}
+
 .codeimage img {
 	/*margin: 0 auto;
 	margin-left: 38%;*/
