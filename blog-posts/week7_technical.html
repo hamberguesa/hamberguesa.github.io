@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Favicon-->
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAv/7lAH/LfwCy/v8AmeT/AGa6fwBZy/4AAGWcAJWq1AAAWI8AAHFZAEu+8gAAmP0A2PL/AAAZegAAi/AAAAxtAACMzADM/v8ADKXYABlmugAATKEAWMv/AAAMfgAA23IAAKU7AMrU6QAZsuUAFl27AEzxpQAmnL8AAAx2ABmy/gAAiwAAAFwAAGXL/wAAfuQAf8v+AEyx/wAmv/IAAHsdACay5QAynL8AAHLMADLL8QAAZb8AP7LcAADwcgAAJZQAMrLlAD/Y/gA/qT8AGZjlAABx2AC/v9wAJqXyABmHsgC/5f4AC2HDALLl/wAMM34Amcv/AAA/fgBy8b8ALFWqAD+L2AA/mD8Av9jyAL/L5QAAf8sADKX9AD++/wBgf78AGbLxAACYAAAAmNgAAORMAH/QfwB/f6UAABmHAACcYQAAf8wAJr/+AAByvwAAMpwAJs9lAAx2PwAAJY8AFmnHAH+y5QCM2P4AGaXlAL/cvwAAftgAIVmyADLL5QAAbh0AMsv+AL/lvwAAZcwAMqXUAD8/fgAAXFAAAFi/AABLsgAAlyYAcr7/AADjcgBZqb8APz+PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ1krUVFRUVFZQwAAAAAAWVFLXyxhYWFhSxFBRAAAAGMVT08wTzBPFC4yNGc2AAAOV2hPCQdPClcfPGRFTwAAbVQ+L0xMGGs+FxBlQ2gAAVBgKAVNHQM/IRlmTgAAAFxpaWxqJiZqPQQSVUozYgBcKiYjCzEbKRtHNx5WIkJcDRYTURFjKysrURMnWzgCYjsbXTU1NSRjNTVRURNTGgANSUYPDAwMDCQ1Yy0rHAgAAAZSRkYMDAwPJDUcHF4aAAAAWiBGRg8kDyRjXkBIAAAAAAAAOSU1NTpYXggaAAAAAAAAAAAAAAAAAAAAAAAAAP//AADADwAAgAMAAIABAACAAQAAgAEAAAAHAAAAAQAAAAAAAAAAAAAAAQAAAAEAAIABAADAAwAA8AcAAP//AAA=" rel="icon" type="image/x-icon" />
+
+		<title>From Court to Code</title>
+		<link type="text/css" rel="stylesheet" href="../unit1_projects/stylesheets/blogtemplate.css"/>
+		<!--Fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Neuton:400,400italic,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+	</head>
+		
+	<body>
+	
+		<!--Navigation Bar-->
+		<div id="navibar">
+		<p><a href="../index.html">Home</a> &nbsp; <a href="about.html">About</a> &nbsp; <a href="week1_technical.html">Technical</a> &nbsp; <a href="week1_cultural.html">Cultural</a> &nbsp; <a href="contact.html">Contact</a></p>
+		<hr>
+		</div>
+
+		<header><img src="Liberty.jpg"/></header>
+
+		<!--Content -->
+		<div id="content"> <!--needs to be repeated for ea. article begin-->
+			<h1 class="title">How to Hack the Planet</h1>
+			<h4 class="date">August 26, 2014</h4>
+
+			<!--Article Begins Here -->
+			<p>When SQL is used to display data on a web page, it is common to let users input their own search values. Since SQL statements are text only, it is easy to dynamically change SQL statements to provide the user with selected data. Thus, there are potential dangers with using user input in SQL statements.</p>
+
+			<h3>What is SQL Injection?</h3>
+			<p><strong>SQL injection</strong> is a technique where malicious users can inject SQL commands into an SQL statement via web page input. Injected SQL commands can alter SQL statements and compromise the security of a web application.</p>
+
+			<h3>SQL Injection Based on 1=1 is Always True</h3>
+			<p>The example below creates a SELECT statement by adding a variable (txtUserId) to a SELECT string. The variable is fetched from user input.</p>
+
+			<pre><code>
+			txtUserId = getRequestString("UserId");
+			txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
+			</code></pre>
+
+			<p>Let's say that the original purpose of the code was to create an SQL statement to select a user with a given user id.  There is nothing to prevent a user from entering "wrong" input, so the user could enter something like '105 or 1=1'. The resulting SELECT statement would be:</p>
+
+			<pre><code>
+			SELECT * FROM Users WHERE UserId = 105 or 1=1</code></pre>
+
+			<p>The SQL code above is valid. It will return all rows from the table Users, since WHERE 1=1 is always true.  Obviously, this is dangerous. What if the Users table contained user names and passwords? A hacker might then get access to all the user names and passwords in the database by simply inserting 105 or 1=1 into the input box when prompted.</p>
+
+			<h3>SQL Injection Based on ""="" is Always True</h3>
+			<p>Here is a common construction used to verify user login to a web site:</p>
+
+			<pre><code>
+			userName = getRequestString("UserName");
+			userPassword = getRequestString("UserPassword");
+
+			sql = "SELECT * FROM Users WHERE Name ='" + userName + "' AND Password ='" + userPassword + "'"</code></pre>
+
+			<p>A hacker might get access to user names and passwords in a database by simply inserting " or ""=" into the user name or password text box. This would create a valid SQL statement like:</p>
+
+			<pre><code>
+			SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""</code></pre>
+
+			<p>This would return all rows from the table Users, since WHERE ""="" is always true.</p>
+
+			<div class="image"><img src="https://www.udemy.com/blog/wp-content/uploads/2013/10/sqlinjectiontutorial1-300x225.jpg"></div>
+
+			<h3>Primary Defenses</h3>
+			<p>Some web developers use a "blacklist" of words or characters to search for in SQL input in order to prevent SQL injection attacks, but this is not a good idea. Many of these words (like delete or drop) and characters (like semicolons and quotation marks) are used in common language, and should be allowed in many types of input. <br><br>
+
+			<strong>Prepared Statements (Parameterized Queries):</strong> Parameterized queries force the developer to first define all the SQL code, and then pass in each parameter to the query later. This coding style allows the database to distinguish between code and data, regardless of what user input is supplied. Prepared statements ensure that an attacker is not able to change the intent of a query, even if SQL commands are inserted by an attacker. An example of a prepared statement in Ruby is:</p> 
+
+			<pre><code>
+			insert_new_user = db.prepare "INSERT INTO users (name, age, gender) VALUES (?, ? ,?)"
+			insert_new_user.execute 'John Smith', '20', 'male'</code></pre> <br><br>
+
+			<p><strong>Stored Procedures:</strong> Stored procedures have the same effect as the use of prepared statements when implemented safely (don't include any unsafe dynamic SQL generation). Stored procedures require the developer to define the SQL code first, and then pass in the parameters after. The difference between prepared statements and stored procedures is that the SQL code for a stored procedure is defined and stored in the database itself, and then called from the application. Both of these techniques have the same effectiveness in preventing SQL injection so you should choose which approach makes the most sense for you.  An example of stored procedures in Ruby is:</p>
+
+			<pre><code>
+			PROCEDURE SafeGetBalanceQuery(
+   			   @UserID varchar(20),
+   			   @Dept varchar(10)) AS BEGIN
+ 
+   			   SELECT balance FROM accounts_table WHERE user_ID = @UserID AND department = @Dept
+ 			END</code></pre>
+
+ 			<p>Here, no dynamic SQL is being created. Parameters passed into stored procedures are naturally bound to their location within the query without anything special being required.</p>
+
+ 			<p><strong>Escaping All User Supplied Input:</strong> The third technique is to escape user input before putting it in a query. If you are concerned that rewriting your dynamic queries as prepared statements or stored procedures might break your application or adversely affect performance, then this might be the best approach. However, this methodology is frail compared to using parameterized queries and should only be used with caution to retrofit source code that relates to a no-longer supportedor manufactured operating system or other computer technology (aka legacy code). Applications built from scratch, or applications requiring low-risk tolerance should be built or re-written using parameterized queries. This technique works like this. Each database management system (DBMS) supports one or more character escaping schemes specific to certain kinds of queries. If you escape all user supplied input using the proper escaping scheme for the database you are using, the DBMS will not confuse that input with SQL code written by the developer, thus avoiding any possible SQL injection vulnerabilities.</p>
+
+ 			<p>For example, MySQL supports two escaping modes: (1) ANSI_QUOTES SQL mode, which simply encodes all ' (single tick) characters with '' (two single ticks); and (2) MySQL mode, which does the following:</p>	
+
+ 			<pre><code>
+ 			NUL (0x00) --> \0  [This is a zero, not the letter O]
+ 			BS  (0x08) --> \b
+ 			TAB (0x09) --> \t
+ 			LF  (0x0a) --> \n
+ 			CR  (0x0d) --> \r
+ 			SUB (0x1a) --> \Z
+ 			"   (0x22) --> \"
+ 			%   (0x25) --> \%
+ 			'   (0x27) --> \'
+ 			\   (0x5c) --> \\
+ 			_   (0x5f) --> \_ 
+ 			all other non-alphanumeric characters with ASCII values less than 256  --> \c
+ 			where 'c' is the original non-alphanumeric character.</code></pre>
+
+			<h3>Additional Defenses</h3>
+
+			<p>Beyond adopting one of the three above primary defenses, it is also recommended to adopt both of the following additional defenses:<br><br>
+
+			<strong>Least Privilege:</strong> To minimize the potential damage of a successful SQL injection attack, you should minimize the privileges assigned to every database account in your environment. Do not assign DBA or admin type access rights to your application accounts. Make sure that accounts that only need read access are only granted read access to the tables they need access to. If an account only needs access to portions of a table, consider creating a view that limits access to that portion of the data and assigning the account access to the view instead, rather than the underlying table. Rarely, if ever, grant create or delete access to database accounts.</p>
+
+			<p><strong>White List Input Validation:</strong> Input validation can be used to detect unauthorized input before it is passed to the SQL query. (See the <a href="https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet"target="_blank">Input Validation Cheat Sheet</a>.) <br><br>
+
+			And for more information, check out the <a href="https://www.owasp.org/index.php/SQL_Injection"target="_blank">SQL Injection Cheat Sheet</a>.</p>
+
+		</div>
+
+		<div class="backarrow">
+			<a href="week6_technical.html"> &#65513; Previous Post</a>
+		</div>
+
+		<div class="nextarrow">
+			<a href=""> Next Post &#65515;</a>
+		</div>
+		
+		<hr>
+		<!--Footer -->
+		<footer>
+			<p>Copyright Amber Hager 2014<br>Website Logo: Lady Justice. Image Credit: "All shall be equal before the law" by <a href="http://www.flickr.com/photos/smbaxter24/4376733118/"target="_blank">siobhanm_baxter</a> on Flickr via Creative Commons.</p>
+		</footer>
+	</body>
+</html>
