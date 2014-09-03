@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Favicon-->
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAv/7lAH/LfwCy/v8AmeT/AGa6fwBZy/4AAGWcAJWq1AAAWI8AAHFZAEu+8gAAmP0A2PL/AAAZegAAi/AAAAxtAACMzADM/v8ADKXYABlmugAATKEAWMv/AAAMfgAA23IAAKU7AMrU6QAZsuUAFl27AEzxpQAmnL8AAAx2ABmy/gAAiwAAAFwAAGXL/wAAfuQAf8v+AEyx/wAmv/IAAHsdACay5QAynL8AAHLMADLL8QAAZb8AP7LcAADwcgAAJZQAMrLlAD/Y/gA/qT8AGZjlAABx2AC/v9wAJqXyABmHsgC/5f4AC2HDALLl/wAMM34Amcv/AAA/fgBy8b8ALFWqAD+L2AA/mD8Av9jyAL/L5QAAf8sADKX9AD++/wBgf78AGbLxAACYAAAAmNgAAORMAH/QfwB/f6UAABmHAACcYQAAf8wAJr/+AAByvwAAMpwAJs9lAAx2PwAAJY8AFmnHAH+y5QCM2P4AGaXlAL/cvwAAftgAIVmyADLL5QAAbh0AMsv+AL/lvwAAZcwAMqXUAD8/fgAAXFAAAFi/AABLsgAAlyYAcr7/AADjcgBZqb8APz+PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ1krUVFRUVFZQwAAAAAAWVFLXyxhYWFhSxFBRAAAAGMVT08wTzBPFC4yNGc2AAAOV2hPCQdPClcfPGRFTwAAbVQ+L0xMGGs+FxBlQ2gAAVBgKAVNHQM/IRlmTgAAAFxpaWxqJiZqPQQSVUozYgBcKiYjCzEbKRtHNx5WIkJcDRYTURFjKysrURMnWzgCYjsbXTU1NSRjNTVRURNTGgANSUYPDAwMDCQ1Yy0rHAgAAAZSRkYMDAwPJDUcHF4aAAAAWiBGRg8kDyRjXkBIAAAAAAAAOSU1NTpYXggaAAAAAAAAAAAAAAAAAAAAAAAAAP//AADADwAAgAMAAIABAACAAQAAgAEAAAAHAAAAAQAAAAAAAAAAAAAAAQAAAAEAAIABAADAAwAA8AcAAP//AAA=" rel="icon" type="image/x-icon" />
+
+		<title>From Court to Code</title>
+		<link type="text/css" rel="stylesheet" href="../unit1_projects/stylesheets/blogtemplate.css"/>
+		<!--Fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Neuton:400,400italic,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+	</head>
+		
+	<body>
+	
+		<!--Navigation Bar-->
+		<div id="navibar">
+		<p><a href="../index.html">Home</a> &nbsp; <a href="about.html">About</a> &nbsp; <a href="week1_technical.html">Technical</a> &nbsp; <a href="week1_cultural.html">Cultural</a> &nbsp; <a href="contact.html">Contact</a></p>
+		<hr>
+		</div>
+
+		<header><img src="Liberty.jpg"/></header>
+
+		<!--Content -->
+		<div id="content"> <!--needs to be repeated for ea. article begin-->
+			<h1 class="title">All Aboard! </h1>
+			<h4 class="date">September 2, 2014</h4>
+
+			<!--Article Begins Here -->
+			<p>It's finally time to answer the question we have all been asking ourselves over the past eight weeks -- What is Ruby on Rails?</p>
+
+			<p>Ruby on Rails (aka Rails) is a web application development framework written in the Ruby language. Rails combines the Ruby programming language with HTML, CSS, and JavaScript to create a web application that runs on a web server. Technically, Rails is a package library (a RubyGem) that is installed using the operating system command-line interface. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started. It essentially allows you to write less code while accomplishing more. But be forewarned, Rails is opinionated software. It assumes that there is the "best" way to do things.</p>
+
+			<p>The set of technologies or software libraries that are used to develop an application or deliver web pages is called a technology "stack." As a beginner, your technology stack will likely include Rails, the WEBrick web server (it comes with Ruby), the SQLite database, and the Linux, Mac OS X, or Windows operating system (whatever is installed on your computer). The Rails stack can also include a variety of software libraries (gems) that add features to a website or make development easier. Sometimes the choice of components in a stack is driven by the requirements of an application. At other times, the stack is a matter of personal preference. </p>
+
+			<h3>Rails' Major Guiding Principles</h3>
+
+    		<p><strong>Don't Repeat Yourself:</strong> DRY is a principle of software development which states that every piece of knowledge must have a single, unambiguous, authoritative representation within a system. By not writing the same information over and over again, code is more maintainable, more extensible, and less buggy.<br>
+    		<strong>Convention Over Configuration:</strong> Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that the programmer specify every minutiae through endless configuration files.<br>
+    		<strong>Rails is Omakase:</strong> Omakase is a Japanese phrase that means "I'll leave it to you." In a famous essay, Heinemeier Hansson declared Rails is Omakase, and said, "A team of chefs picked out the ingredients, designed the APIs, and arranged the order of consumption on your behalf according to their idea of what would make for a tasty full-stack framework. When we, or in some cases I - as the head chef of the omakase experience that is Rails - decide to include a dish, it's usually based on our distilled tastes and preferences. I've worked in this establishment for a decade. I've poured well in the excess of ten thousand hours into Rails. This doesn't make my tastes right for you, but it certainly means that they're well formed." Hungry yet? I am!</p>
+
+    		<div class="rectangleimage"><img src="http://592f46.medialib.glogster.com/media/ef8a2d087abeb169d4859a2e04cfb59e92a2cd30c786423729e8f619ff2105b7/girl-on-train-tracks.jpg"></div>
+
+    		<h3>Where Does Rails Get Complicated?</h3>
+    		<p><strong>When Rails Has No Opinion:</strong> As you gain experience with Rails, you may encounter areas where Rails doesn't state an opinion. For example, as of early 2013, there was no "official" approach to queueing background jobs. Much of the lively debate that drives development of new versions of Rails is focused on thrashing out the "opinions" that eventually will be included in the Rails API.<br>
+    		<strong>Omakase But Substitutions Are Allowed:</strong> Implicit in the notion of "Rails is omakase" is an understanding that substitutions are allowed. Professional developers often substitute an alternative testing framework or use a different syntax for creating page views than the "official" version chosen by Heinemeier Hansson.<br>
+    		<strong>Conventions or Magic:</strong> For a skilled programmer, "convention over configuration" adds obscurity. For example, without a configuration file, there is no obvious code that reveals that data from a class named "Person" is saved to a datatable named "people."<br>
+    		<strong>DRY to Obscurity:</strong> To avoid repetitive code, Rails often will offer default behavior that looks like magic because the underlying implementation is hidden in the depths of the Rails code library. A programmer can implement a simple web application with only a few lines of custom code but may wonder where all the behavior comes from. This can be frustrating when, as a beginner, a programmer attempts to customize an application to do more than what is shown in tutorials.</p>
+
+    		<h3>How Does Rails Work?</h3> 
+    		<p>Web servers deliver HTML, CSS, and JavaScript, either from static files that are stored on the server, or from an "application server" that creates files dynamically using a programming language such as Ruby. A software program written in Ruby and organized using Rails conventions is a "web application." Rails combines the Ruby programming language with HTML, CSS, and JavaScript to create a web application. Rails uses Ruby to dynamically assemble HTML, CSS, and JavaScript files from component files (often adding content from a database).</p>
+
+    		<h3>What Does One See On The Computer When Looking at a Rails Application?</h3> 
+    		<p>The answer is a set of files that a programmer can edit with a text editor to create a web application. The files are organized with a specific structure:</p>
+
+    		<pre><code>
+    			+-app
+			| +-assets
+			| | +-images
+			| | +-javascripts
+			| | +-stylesheets
+			| +-controllers
+			| +-helpers
+			| +-mailers
+			| +-models
+			| +-views
+			+-config
+			+-db
+			+-features
+			+-lib
+			+-log
+			+-public
+			+-script
+			+-spec
+			</code></pre>
+
+    		<p>To install Rails, use the gem install command provided by RubyGems:</p>
+
+    		<pre><code>
+    		$ gem install rails</code></pre>
+
+    		<p>And for a step-by-step guide to creating a new Rails project, check out <a href="http://guides.rubyonrails.org/getting_started.html"target="_blank">rubyonrails.org</a>. Personally, I am really looking forward to using Rails! How about you?</p>
+		</div>
+
+		<div class="backarrow">
+			<a href="week7_technical.html"> &#65513; Previous Post</a>
+		</div>
+
+		<div class="nextarrow">
+			<a href=""> Next Post &#65515;</a>
+		</div>
+		
+		<hr>
+		<!--Footer -->
+		<footer>
+			<p>Copyright Amber Hager 2014<br>Website Logo: Lady Justice. Image Credit: "All shall be equal before the law" by <a href="http://www.flickr.com/photos/smbaxter24/4376733118/"target="_blank">siobhanm_baxter</a> on Flickr via Creative Commons.</p>
+		</footer>
+	</body>
+</html>
