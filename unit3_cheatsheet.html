@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!--Favicon-->
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAv/7lAH/LfwCy/v8AmeT/AGa6fwBZy/4AAGWcAJWq1AAAWI8AAHFZAEu+8gAAmP0A2PL/AAAZegAAi/AAAAxtAACMzADM/v8ADKXYABlmugAATKEAWMv/AAAMfgAA23IAAKU7AMrU6QAZsuUAFl27AEzxpQAmnL8AAAx2ABmy/gAAiwAAAFwAAGXL/wAAfuQAf8v+AEyx/wAmv/IAAHsdACay5QAynL8AAHLMADLL8QAAZb8AP7LcAADwcgAAJZQAMrLlAD/Y/gA/qT8AGZjlAABx2AC/v9wAJqXyABmHsgC/5f4AC2HDALLl/wAMM34Amcv/AAA/fgBy8b8ALFWqAD+L2AA/mD8Av9jyAL/L5QAAf8sADKX9AD++/wBgf78AGbLxAACYAAAAmNgAAORMAH/QfwB/f6UAABmHAACcYQAAf8wAJr/+AAByvwAAMpwAJs9lAAx2PwAAJY8AFmnHAH+y5QCM2P4AGaXlAL/cvwAAftgAIVmyADLL5QAAbh0AMsv+AL/lvwAAZcwAMqXUAD8/fgAAXFAAAFi/AABLsgAAlyYAcr7/AADjcgBZqb8APz+PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ1krUVFRUVFZQwAAAAAAWVFLXyxhYWFhSxFBRAAAAGMVT08wTzBPFC4yNGc2AAAOV2hPCQdPClcfPGRFTwAAbVQ+L0xMGGs+FxBlQ2gAAVBgKAVNHQM/IRlmTgAAAFxpaWxqJiZqPQQSVUozYgBcKiYjCzEbKRtHNx5WIkJcDRYTURFjKysrURMnWzgCYjsbXTU1NSRjNTVRURNTGgANSUYPDAwMDCQ1Yy0rHAgAAAZSRkYMDAwPJDUcHF4aAAAAWiBGRg8kDyRjXkBIAAAAAAAAOSU1NTpYXggaAAAAAAAAAAAAAAAAAAAAAAAAAP//AADADwAAgAMAAIABAACAAQAAgAEAAAAHAAAAAQAAAAAAAAAAAAAAAQAAAAEAAIABAADAAwAA8AcAAP//AAA=" rel="icon" type="image/x-icon" />
+
+		<title>From Court to Code</title>
+		<link type="text/css" rel="stylesheet" href="unit1_projects/stylesheets/unit3_cheatsheet.css"/>
+
+		<!--Fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Neuton:400,400italic,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+	</head>
+	
+	<body>
+
+		<div id="background">
+			<h5 class="header">SQL Cheatsheet</h5>
+
+			<!-- TOC -->
+			<ul>
+				<li><a href="#SQL">What is SQL?</a>&nbsp;</li>
+				<li><a href="#relationships">Relationships</a>&nbsp;</li>
+				<li><a href="#selectstmt">Select Statement</a>&nbsp;</li>
+				<li><a href="#operators">Operators</a>&nbsp;</li>
+				<li><a href="#joins">Joins</a>&nbsp;</li>
+				<li><a href="#conventions">Conventions</a></li>
+			</ul>
+
+			<!-- TEXT -->
+			<h3 id="SQL">What is SQL?</h3>
+			<p>
+			SQL (pronounced "ess-que-el") stands for Structured Query Language. SQL is used to communicate with a database, and is the standard language for relational database management systems (DBMS). SQL allows for the creation of a database's structure and data, and allows for data search and retrieval. <br><br> Databases store information in a table, which is like a spreadsheet.  Each column represents a single piece of data (i.e. first name, last name, etc.).  Each row represents a different value for the column, a single instance of data (i.e. Mary, Jones, etc.). Each table must have a primary key, unique to each instance with no duplicates. Things like an ID number, SSN or driver's license number are good primary keys, while things like names are not. 
+			</p>
+
+			<h3 id="relationships">Relationships</h3>
+			<p>
+			There are three types of relationships between tables: (1) One-to-Many, (2) Many-to-Many, and (3) One-to-One. <br><br> <strong>One-to-Many:</strong> A one-to-many relationship is the most common type of relationship. In this type of relationship, a row in table A can have many matching rows in table B, but a row in table B can have only one matching row in table A. For example, publishers and titles tables have a one-to-many relationship: each publisher produces many titles, but each title comes from only one publisher. Make a one-to-many relationship if only one of the related columns is a primary key or has a unique constraint. <br><br> <strong>Many-to-Many:</strong> In a many-to-many relationship, a row in table A can have many matching rows in table B, and vice versa. You create such a relationship by defining a third table, called a junction table, whose primary key consists of the foreign keys from both table A and table B. For example, an authors table and a titles table have a many-to-many relationship that is defined by a one-to-many relationship from each of these tables to the title/authors table. The primary key of the title/authors table is the combination of the author_id column (the authors table's primary key) and the title_id column (the titles table's primary key). <br><br> <strong>One-to-One:</strong> In a one-to-one relationship, a row in table A can have no more than one matching row in table B, and vice versa. A one-to-one relationship is created if both of the related columns are primary keys or have unique constraints. This type of relationship is not common because most information related in this way would be all in one table. You might use a one-to-one relationship to divide a table with many columns, isolate part of a table for security reasons, store data that is short-lived and could be easily deleted by simply deleting the table, or store information that applies only to a subset of the main table.
+			</p>
+
+			<h3 id="selectstmt">Select Statement</h3>
+			<p>
+			The select statement is used to retrieve data from a database.  The result is stored in a result table, called the result-set. The syntax is as follows:
+			</p><br>
+			<code>SELECT [ALL/DISTINCT] column1 [column2, etc.]<br>
+			FROM table1 [table2, etc.]<br>
+			[WHERE conditions]<br>
+			[GROUP BY columnlist]<br>
+			[HAVING conditions]<br>
+			[ORDER BY column list [ASC/DESC]]
+			</code><br>
+
+			<p>SQL keywords are often written in CAPS, and the values in brackets are optional.  SELECT and FROM are the only <i>required</i> keywords.<br><br><strong>To Select All:</strong></p>
+			<code>SELECT * FROM table</code>
+			<p><strong>To Eliminate Duplicate Values From a Column:</strong></p>
+			<code>SELECT DISTINCT column FROM table</code>
+			<p><strong>To Sort in a Specific Order:</strong> When sorting, ASC (ascending) is the default and doesn't need to be specified, while DESC (descending) does need to be specified.</p>
+			<code>SELECT column FROM table<br>ORDER BY column DESC</code>
+
+
+			<h3 id="operators">Operators</h3>
+			<p>
+			Operators are to be used with the WHERE keyword in order to select more specific data:<br><br>
+			<strong>Comparison: </strong> Equals (=), Greater Than (>), Less Than (<) , Greater Than or Equal To (>=), Less Than or Equal To (<=) </p>
+			<code>WHERE age >= 80</code><br>
+
+			<p><strong>Boolean: </strong> AND, OR <br> AND returns rows for which all conditions are true <br> OR returns rows for which either condition is true </p>
+			<code>WHERE age 75 AND last_name = 'Smith'</code><br>
+
+			<p><strong>IN:</strong> Used to specify multiple values</p>
+			<code>WHERE age IN (23, 51, 75)</code><br>
+
+			<p><strong>Negative Conditions: </strong> Not Equal (<>), NOT</p>
+			<code>WHERE age <> 80 <br> WHERE NOT age 80</code><br>
+
+			<p><strong>BETWEEN: </strong>Used to select a range of data between two values</p>
+			<code>WHERE age BETWEEN 23 and 80</code><br>
+
+			<p><strong>IS NULL/IS NOT NULL: </strong>Used to test for a null value</p>
+			<code>WHERE age IS NULL <br> WHERE AGE IS NOT NULL</code><br>
+
+			<p><strong>LIKE: </strong>Used to search for a specified pattern, where % represents multiple missing characters before/after the pattern or _ represents a single missing character in the pattern</p>
+			<code>WHERE first_name LIKE 'Nan%' => Nan, Nancy <br> WHERE first_name LIKE '%ob%' => Robert, Bob <br> WHERE first_name LIKE '_ean' => Dean, Sean</code>
+
+			<h3 id="joins">Joins</h3>
+			<p>SQL joins combine records coming from more than one table using the common values between those tables:<br><br><strong>Cross Join: </strong></p>
+			<code>SELECT * FROM table1 CROSS JOIN table2</code><br>
+
+			<p><strong>Join/Inner Join: </strong>Returns rows where there is at least one match in both tables.  Can use the keyword JOIN or the keyword INNER JOIN.</p>
+			<code>SELECT * FROM table1 JOIN table2<br>ON table1_column = table2_column</code><br>
+
+			<p><strong>Equi-Join: </strong>Uses only equality comparisons in the join (e.g. no > or < comparison operators)</p><br>
+
+			<p><strong>Equi-Join With the Using Construct: </strong>Applicable with columns having the same name</p>
+			<code>SELECT * FROM faculty INNER JOIN dept USING dept_id</code><br>
+
+			<p><strong>Natural Join: </strong>An equi-join with only one column for each equally-name column</p>
+			<code>SELECT * FROM faculty NATURAL JOIN dept</code><br>
+
+			<p><strong>Full Join/Full Outer Join: </strong>Returns rows where there is a match in at least one of the tables</p>
+			<code>SELECT * FROM table1 FULL JOIN table2 <br> ON table1_column = table2_column</code><br>
+
+			<p><strong>Right Join/Right Outer Join: </strong>Returns all rows from the right table even if there are no matches in the left table</p>
+			<code>SELECT * FROM table1 RIGHT JOIN table2 <br> ON table1_column = table2_column</code><br>
+
+			<p><strong>Left Join/Left Outer Join: </strong>Returns all rows from the left table even if there are no matches in the right table</p>
+			<code>SELECT * FROM table1 LEFT JOIN table2 <br> ON table1_column = table2_column</code><br>
+
+
+			<h3 id="conventions">Conventions</h3>
+			<p>*  Table names are <i>always</i> plural<br>*  Each row is identified by automatically-incrementing integer field IDs<br>*  use_snake_case_to_name_fields<br>*  Fields involving dates/times end in _at or _on unless it's obvious they already refer to something time related (birthday)<br>*  Make field and table names as self-explanatory as possible<br>*  Rails includes created_at and updated_at fields by default</p><br>
+
+			<a id="link" href="http://overapi.com/mysql/">Additional (& More Comprehensive) Cheatsheet</a>
+		</div>
+
+	</body> 
+</html>
