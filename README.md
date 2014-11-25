@@ -1,4 +1,4 @@
 hamberguesa.github.io
 =====================
 
-Phase 0 GitHub Page Site 
+Scratch-built blog application built throughout Phase 0 of Dev Bootcamp
